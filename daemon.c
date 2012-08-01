@@ -30,6 +30,36 @@ int main(int argc, char* argv[]) {
 	char *device = "/dev/input/by-id/usb-NewRoad_Sem._NewRoad_System_PS2_Interface-event-mouse"; // Our HID RFID reader, example: 0419:0912 Samsung Info. Systems America, Inc.
 	char code[128], command[128];
 
+
+	keycodes = {
+[0]="UNKNOWN",
+[1]="ESCAPE",        [2]="1",  [3]="2",  [4]="3",  [5]="4",  [6]="5",
+ [7]="6",  [8]="7",  [9]="8", [10]="9",
+[11]="0", [12]="-", [13]="=", [14]="BACKSPACE",   [15]="TAB",
+[16]="q", [17]="w", [18]="e", [19]="r", [20]="t",
+[21]="y", [22]="u", [23]="i", [24]="o", [25]="p",
+[26]="[", [27]="]", [28]="ENTER",       [29]="LEFTCTRL",    [30]="a",
+[31]="s", [32]="d", [33]="f", [34]="g", [35]="h",
+[36]="j", [37]="k", [38]="l", [39]=";", [40]="'",
+[41]="~", [42]="LEFTSHIFT",   [43]="\\",[44]="z", [45]="x",
+[46]="c", [47]="v", [48]="b", [49]="n", [50]="m",
+[51]=",", [52]=".", [53]="/", [54]="RIGHTSHIFT",  [55]="*",
+[56]="LEFTALT",     [57]=" ", [58]="CAPSLOCK",    [59]="F1",[60]="F2",
+[61]="F3",[62]="F4",[63]="F5",[64]="F6",[65]="F7",
+[66]="F8",[67]="F9",[68]="F10",[69]="NUMLOCK",    [70]="SCROLLLOCK",
+[71]="7", [72]="8", [73]="9", [74]="-", [75]="4",
+[76]="5", [77]="6", [78]="+", [79]="1", [80]="2",
+[81]="3", [82]="0", [83]=".", 
+[87]="F11",[88]="F12",
+[156]="\n",[157]="RIGHTCTRL",[181]="/",[184]="RIGHTALT",   [199]="HOME",
+[200]="ARROW_UP",  [201]="PAGEUP",     [203]="ARROW_LEFT", [205]="ARROW_RIGHT",
+[207]="END",       [208]="ARROW_DOWN", [209]="PAGEDOWN",   [210]="INSERT",
+[211]="DELETE",    [256]="LEFTMOUSE",  [257]="RIGHTMOUSE", [258]="MIDDLEMOUSE",
+[259]="MOUSE3",    [260]="MOUSE4",     [261]="MOUSE5",     [262]="MOUSE6",
+[263]="MOUSE7",    [264]="MOUSEWHEELUP",[265]="MOUSEWHEELDOWN",
+}
+
+
 	pid_t pid;
    
 	pid = fork();
